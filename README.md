@@ -14,7 +14,7 @@ This Sketch is using SpenceKonde's [ATTinyCore](https://github.com/SpenceKonde/A
 Setting           | Value            | Description
 ------------------|------------------|-----------------------------------------------
 Chip              | ATTiny85         |   
-Clock             | 8 MHz (internal) |   
+Clock             | 16 MHz (PLL)     |   
 B.O.D. Level      | B.O.D. Disabled  | Brownout-Detector
 Save EEPROM       | EEPROM Retained  | EEPROM used for storing data between restarts
 Timer 1 Clock     | CPU              |  

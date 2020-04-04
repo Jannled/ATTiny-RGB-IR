@@ -4,6 +4,11 @@
  * LED Green	PB1
  * LED Blue		PB4
  * IR-Receiver	PB2
+ * 
+ * Spence Kondes ATTinyCore
+ * Frequency: 		16MHz (PLL)
+ * Timer1 Clock:	CPU
+ * millis/micros:	Enabled
  */
 
 #include "InterRemote.h"
@@ -17,7 +22,7 @@
 #define B_UP			0xF609
 #define B_DOWN			0xE21D
 #define B_FLASH			0xB24D
-#define B_STROBE		0x00FF
+#define B_STROBE		0xFF00
 #define B_FADE			0xE51A
 #define B_SMOOTH		0xF30C
 
@@ -69,7 +74,7 @@ const color_t colors[] =
 	color_t{255, 255, 255}  // WHITE
 };
 
-color_t currentColor = colors[12];//NUM_COLORS-1];
+color_t currentColor = colors[NUM_COLORS-1];
 float brightness = 1.0f;
 uint8_t animation = 0;
 bool on = true;
@@ -140,15 +145,6 @@ void received(uint32_t command)
 	//Check if Button is one of the function buttons
 	switch(command)
 	{
-		#define B_ON			0xFFB04F
-		#define B_OFF			0xFFF807
-		#define B_UP			0xFF906F
-		#define B_DOWN			0xFFB847
-		#define B_FLASH			0xFFB24D
-		#define B_STROBE		0xFF00FF
-		#define B_FADE			0xFF58A7
-		#define B_SMOOTH		0xFF30CF
-		
 		case B_ON: 
 			switchOn();
 			break;

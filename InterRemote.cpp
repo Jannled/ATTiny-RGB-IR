@@ -136,12 +136,10 @@ done:
 
 bool irAvailable()
 {
-	if (irBuffPos < 100)
+	if (irBuffPos < 128)
 		return false;
 
-	digitalWrite(4, HIGH);	
 	irDecodeNEC();
-	digitalWrite(4, LOW);
 
 	return true;
 }

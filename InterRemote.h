@@ -10,7 +10,7 @@
 #define TOLERANCE	0.3				// 10%
 
 //you may increase this value on Arduinos with greater than 2k SRAM
-#define IR_BUFF_LEN 128
+#define IR_BUFF_LEN 150
 #define IR_PIN 2 //pin D2 or D3 on standard arduinos. (other pins may be available on More mordern modules like MEga2560, DUE, ESP8266, ESP32)
 
 typedef enum {
